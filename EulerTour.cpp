@@ -1,3 +1,15 @@
+struct Tree{ //0 indexed
+    int n;
+    vector<vector<int>> adj;
+    Tree(int n) : n(n){
+        adj.resize(n);
+    }
+    void addedge(int u,int v){
+        adj[u].pb(v);
+        adj[v].pb(u);
+    }
+};
+
 struct EulerTour : Tree{
     private : 
     int t;
