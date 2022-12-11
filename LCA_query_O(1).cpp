@@ -162,3 +162,18 @@ int main() {
         solve();
     }
 }
+
+/*
+    Time complexity:
+    The complexity of each query using the LCA class depends on the value of the lgn template parameter.
+    This parameter specifies the maximum depth of the tree, 
+    and determines the maximum number of ancestors that can be stored for each node in the par array.
+
+    If the lgn parameter is set to a value of d, the complexity of each query using the LCA class is O(d).
+    This is because the getLCA method uses a binary search over the par array to find the LCA of two nodes, 
+    and the maximum depth of the search is d.
+
+    In the code example, lgn is set to a value of 20. 
+    This means that the complexity of each query using the LCA class is O(20), or O(1) if we assume that the constant factors are small. 
+    However, a larger value of lgn may be necessary for deeper trees, in which case the complexity of each query will increase.
+*/
